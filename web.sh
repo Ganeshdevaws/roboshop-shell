@@ -51,7 +51,7 @@ VALIDATE $? "Moving to default html directory"
 
 unzip /tmp/web.zip &>>$LOGFILE
 
-VALIDATING $? "Unzipping web artifacts"
+VALIDATE $? "Unzipping web artifacts"
 
 cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$LOGFILE
 
