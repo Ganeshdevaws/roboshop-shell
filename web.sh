@@ -43,7 +43,7 @@ VALIDATE $? "Removing default index html files"
 
 curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip &>>$LOGFILE
 
-VALIDATE $? "Downloading web artifacts"
+VALIDATE $? "Downloading web artifact"
 
 cd /usr/share/nginx/html &>>$LOGFILE
 
