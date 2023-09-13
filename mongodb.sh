@@ -2,8 +2,6 @@
 
 DATE=$(date +%F)
 LOGDIR=/tmp
-# /home/centos/shellscript-logs/script-name-date.log
-SCRIPT_NAME=$0
 LOGFILE=$LOGDIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m"
