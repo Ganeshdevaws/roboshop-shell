@@ -33,7 +33,7 @@ yum module enable redis:remi-6.2 -y &>>$LOGFILE
 
 VALIDATE $? "enabling redis 6.2"
 
-yum install redis -y &>>$LOGFIE
+yum install redis -y &>>$LOGFILE
 
 VALIDATE $? "installing redis 6.2"
 
