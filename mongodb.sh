@@ -34,7 +34,7 @@ VALIDATE $? "Copied MongoDB repo into yum.repos.d"
 
 yum install mongodb-org -y &>> $LOGFILE
 
-VALIDATE $? "Instalaation of MongoDB"
+VALIDATE $? "Instalation of MongoDB"
 
 systemctl enable mongod &>> $LOGFILE
 
