@@ -50,9 +50,9 @@ pip3.6 install -r requirements.txt &>>$LOGFILE
 
 VALIDATE $? "Downloading dependencies"
 
-CP /home/centos/roboshop-shell/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
+cp /home/centos/roboshop-shell/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
 
-VALIDATE $? "Copying payment service"
+VALIDATE $? "Coping payment service"
 
 systemctl daemon-reload &>>$LOGFILE
 
@@ -64,4 +64,4 @@ VALIDATE $? "Enabling payment"
 
 systemctl start payment &>>$LOGFILE
 
-VALIDATE $? "Starting payment"
+VALIDATE $? "Starting"
