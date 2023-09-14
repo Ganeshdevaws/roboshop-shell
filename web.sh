@@ -35,7 +35,7 @@ VALIDATE $? "Enabling Nginx"
 
 systemctl start nginx &>>$LOGFILE
 
-VALIDATING $? "Starting Nginx"
+VALIDATE $? "Starting Nginx"
 
 rm -rf /usr/share/nginx/html/* &>>$LOGFILE
 
