@@ -3,13 +3,13 @@
 DATE=$(date +%F)
 LOGDIR=/tmp
 LOGFILE=$LOGDIR/$0-$DATE.log
-cartID=$(id -u)
+USERID=$(id -u)
 R="\e[31m"
 G="\E[32m"
 N="\e[0m"
 Y="\e[33m"
 
-if [ $cartID -ne 0 ];
+if [ $USERID -ne 0 ];
 then
     echo -e "$R ERROR:: Please run this script with root access $N"
     exit 1
@@ -33,7 +33,7 @@ yum install nodejs -y &>>$LOGFILE
 
 VALIDATE $? "Installing NodeJS"
 
-cartadd roboshop &>>$LOGFILE
+useradd roboshop &>>$LOGFILE
 
 mkdir /app &>>$LOGFILE
 
