@@ -30,9 +30,9 @@ yum install python36 gcc python3-devel -y &>>$LOGFILE
 
 VALIDATE $? "Installing python"
 
-useradd roboshop&>>$LOGFILE
+useradd roboshop &>>$LOGFILE
 
-mkdir /app&>>$LOGFILE
+mkdir /app &>>$LOGFILE
 
 curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip &>>$LOGFILE
 
@@ -44,7 +44,7 @@ VALIDATE $? "Moving to app directory"
 
 unzip /tmp/payment.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping payment"
+VALIDATE $? "Unzipping builds"
 
 pip3.6 install -r requirements.txt &>>$LOGFILE
 
@@ -64,4 +64,4 @@ VALIDATE $? "Enabling payment"
 
 systemctl start payment &>>$LOGFILE
 
-VALIDATE $? "Starting"
+VALIDATE $? "Starting payment"
