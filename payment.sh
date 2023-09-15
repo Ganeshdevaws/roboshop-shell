@@ -44,7 +44,7 @@ VALIDATE $? "Moving to app directory"
 
 unzip /tmp/payment.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping paymenty"
+VALIDATE $? "Unzipping payment"
 
 pip3.6 install -r requirements.txt &>>$LOGFILE
 
