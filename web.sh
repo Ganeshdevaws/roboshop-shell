@@ -42,9 +42,9 @@ rm -rf /usr/share/nginx/html/* &>>$LOGFILE
 
 VALIDATE $? "Removing default index html files"
 
-curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip &>>$LOGFILE
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>$LOGFILE
 
-VALIDATE $? "Downloading web build"
+VALIDATE $? "Downloading web artifacts"
 
 cd /usr/share/nginx/html &>>$LOGFILE
 
@@ -52,7 +52,7 @@ VALIDATE $? "Moving to default html directory"
 
 unzip /tmp/web.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping web build"
+VALIDATE $? "Unzipping web artifacts"
 
 cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$LOGFILE
 
