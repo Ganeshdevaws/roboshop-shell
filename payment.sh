@@ -34,9 +34,9 @@ useradd roboshop &>>$LOGFILE
 
 mkdir /app &>>$LOGFILE
 
-curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip &>>$LOGFILE
+curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip &>>$LOGFILE
 
-VALIDATE $? "Downloading builds"
+VALIDATE $? "Downloading artifacts"
 
 cd /app &>>$LOGFILE
 
@@ -44,7 +44,7 @@ VALIDATE $? "Moving to app directory"
 
 unzip /tmp/payment.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping builds"
+VALIDATE $? "Unzipping artifacts"
 
 pip3.6 install -r requirements.txt &>>$LOGFILE
 
