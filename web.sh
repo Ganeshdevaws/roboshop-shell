@@ -50,9 +50,9 @@ cd /usr/share/nginx/html &>>$LOGFILE
 
 VALIDATE $? "Moving to default html directory"
 
-unzip /tmp/web.zip &>>$LOGFILE
+unzip /tmp/frontend.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping web artifacts"
+VALIDATE $? "Unzipping frontend artifacts"
 
 cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$LOGFILE
 
